@@ -9,9 +9,7 @@ public class Main {
 		
 		DigitalClock clock = new DigitalClock(timer);
 		timer.addObserver(clock);
-		
+	
 		new Thread(timer).start();
-
 	}
-
 }

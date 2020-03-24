@@ -13,7 +13,5 @@ public class DigitalClock implements Observer {
 	@Override
 	public void update(Observable o, Object arg) {
 		System.out.println(timer.getHours() + ":" + timer.getMinutes() + ":" + timer.getSeconds());
-
 	}
-
 }

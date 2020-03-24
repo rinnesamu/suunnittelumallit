@@ -1,19 +1,17 @@
 package observer;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Observable;
 
 public class ClockTimer extends Observable implements Runnable {
 	private int lastSendSeconds;
-	
-	SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");  
-    Date date; //new Date();  
-    //System.out.println(formatter.format(date));  
+    Date date;
+    
 	public ClockTimer() {
 		this.date = new Date();
 		this.lastSendSeconds = date.getSeconds();
 	}
+	
 	@Override
 	public void run() {
 		while (true) {
@@ -24,7 +22,6 @@ public class ClockTimer extends Observable implements Runnable {
 				lastSendSeconds = date.getSeconds();
 			}
 		}
-		
 	}
 	
 	public String getSeconds() {
@@ -34,6 +31,7 @@ public class ClockTimer extends Observable implements Runnable {
 		}
 		return seconds;
 	}
+	
 	public String getMinutes() {
 		String minutes = Integer.toString(date.getMinutes());
 		if (minutes.length() == 1) {
@@ -41,6 +39,7 @@ public class ClockTimer extends Observable implements Runnable {
 		}
 		return minutes;
 	}
+	
 	public String getHours() {
 		String hours = Integer.toString(date.getHours());
 		if (hours.length() == 1) {
@@ -48,5 +47,4 @@ public class ClockTimer extends Observable implements Runnable {
 		}
 		return hours;
 	}
-
 }
