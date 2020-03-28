@@ -13,6 +13,7 @@ public class Pokemon {
 	
 	protected void changeState(IPokemonCharacter p) {
 		this.pokemonCharacter = p;
+		pokemonCharacter.printStats();
 		
 	}
 	
@@ -22,7 +23,6 @@ public class Pokemon {
 		attackCount++;
 		if (attackCount == 10) {
 			pokemonCharacter.evolve(this);
-			pokemonCharacter.printStats();
 			attackCount = 0;
 		}
 	}

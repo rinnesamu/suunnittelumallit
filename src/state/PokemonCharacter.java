@@ -17,7 +17,6 @@ public abstract class PokemonCharacter implements IPokemonCharacter {
 	}
 	
 	public void evolve(Pokemon p) {
-		System.out.println("You cannot evolve");
 	}
 
 }
