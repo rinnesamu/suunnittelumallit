@@ -10,7 +10,5 @@ public class Main {
 		for (int i  = 0; i < 75; i++) {
 			pokemon.fight();
 		}
-
 	}
-
 }
