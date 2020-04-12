@@ -20,8 +20,4 @@ public class Pokemon {
 		pokemonCharacter.attack();
 		pokemonCharacter.heal();
 	}
-	
-	public void evolvePokemon() {
-		pokemonCharacter.evolve(this);
-	}
 }

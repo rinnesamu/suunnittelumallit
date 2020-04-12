@@ -9,9 +9,11 @@ public class Charizard extends PokemonCharacter {
 	private int totalHp = 80;
 	private int exp = 0;
 	private Pokemon p;
+	private Visitor v;
 	
-	private Charizard(Pokemon p) {
+	private Charizard(Pokemon p, Visitor v) {
 		this.p = p;
+		this.v = v;
 	}
 
 	public void attack() {
@@ -30,9 +32,9 @@ public class Charizard extends PokemonCharacter {
 		System.out.println("Healing: " + healAmount);
 	}
 
-	public static Charizard getInstance(Pokemon p) {
+	public static Charizard getInstance(Pokemon p, Visitor v) {
 		if (INSTANCE == null) {
-			INSTANCE = new Charizard(p);
+			INSTANCE = new Charizard(p, v);
 		}
 		return INSTANCE;
 	}

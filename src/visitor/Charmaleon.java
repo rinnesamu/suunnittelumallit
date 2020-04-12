@@ -46,7 +46,7 @@ public class Charmaleon extends PokemonCharacter {
 	@Override
 	public void evolve(Pokemon p) {
 		System.out.println("Your pokemon evolves!");
-		changeState(p, Charizard.getInstance(p));
+		changeState(p, Charizard.getInstance(p, v));
 	}
 	public int getExp() {
 		return this.exp;
