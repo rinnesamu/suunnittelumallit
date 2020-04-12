@@ -1,9 +1,15 @@
 package visitor;
 
+import visitor.Pokemon;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Pokemon pokemon = new Pokemon();
+		
+		for (int i  = 0; i < 75; i++) {
+			pokemon.fight();
+		}
 
 	}
 
