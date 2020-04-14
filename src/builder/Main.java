@@ -12,8 +12,6 @@ public class Main {
 		cashier.setRestaurant(hesburger);
 		cashier.buildHamburger();
 		System.out.println(cashier.getHamburger());
-		
-
 	}
 
 }
