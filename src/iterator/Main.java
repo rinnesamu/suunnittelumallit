@@ -13,15 +13,17 @@ public class Main {
 			list.add(i);
 		}
 		Iterator iterator = list.iterator();
-		IteratorThread thread1 = new IteratorThread(list, iterator);
-		IteratorThread thread2 = new IteratorThread(list, iterator);
+		IteratorThread thread1 = new IteratorThread(list);
+		IteratorThread thread2 = new IteratorThread(list);
+		//IteratorThread thread1 = new IteratorThread(list, iterator);
+		//IteratorThread thread2 = new IteratorThread(list, iterator);
 		OtherThread swapper = new OtherThread(list);
 		thread1.start();
-		//thread2.start();
-		//swapper.start();
-		//swapper.join();
+		thread2.start();
+		swapper.start();
+		swapper.join();
 		thread1.join();
-		//thread2.join();
+		thread2.join();
 	}
 
 }

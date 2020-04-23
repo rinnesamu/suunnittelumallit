@@ -18,8 +18,8 @@ public class OtherThread extends Thread {
 
 	public void run() {
 		for (int i = 0; i < shufles; i++) {
-			//Collections.swap(collection, random.nextInt(MAX - MIN + 1) + MIN, random.nextInt(MAX - MIN + 1) + MIN);
-			collection.remove(2*i);
+			Collections.swap(collection, random.nextInt(MAX - MIN + 1) + MIN, random.nextInt(MAX - MIN + 1) + MIN);
+			//collection.remove(2*i);
 		}
 	}
 }
